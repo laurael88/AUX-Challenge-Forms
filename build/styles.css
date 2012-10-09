@@ -1,0 +1,176 @@
+/* AUX Form Challenge CSS Styles */
+
+/* Normalizer */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* RESET */
+body {
+	background-color: #B3E3FF;
+	padding: 15px 50px;
+}
+header {
+	height: 65px;
+	border-top: 1px solid #146C86;
+	-moz-border-top-left-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3C8EA6), to(#2F556A));
+	background: -moz-linear-gradient(top,  #3C8EA6,  #2F556A);
+	padding: 20px 40px;
+}
+	header h1 {
+		font-family: 'Kreon', serif;
+		font-weight: 100;
+		color: #FFF;
+		font-size: 36px;
+	}
+	header h2 {
+		font-family: Lucida Grande, Arial, Verdana, sans-serif;
+		color: #B3E3FF;
+		font-size: 11px;
+		font-weight: 600;
+	}
+form {
+	padding-bottom: 30px;
+}
+fieldset {
+	padding-top: 20px;
+	border: 0px solid #FFF;
+}
+legend {
+	font-family: 'Kreon', serif;
+	font-weight: 100;
+	font-size: 22px;
+	color: #2F556A;
+	padding: 6px;
+	margin-left: 15px;
+	float: left;
+}
+label {
+	display: block;
+	font-size: 11px;
+	color: #555555;
+}
+input {
+	height: 32px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 0px inset #CBCBCB;
+	box-shadow: inset 1px 1px 1px #AAAAAA;
+	padding: 0 10px;
+	width: 95%;
+	font-family: Lucida Grande, Arial, Verdana, sans-serif;
+}
+	input#credit_card {
+		width: 50%;
+	}
+	input#security_code {
+		width: 15%;
+	}
+select {
+	height: 26px;
+	padding-top: 3px;
+}
+button {
+	font-family: 'Kreon', serif;
+	font-size: 20px;
+	font-weight: 100;
+	margin: 30px auto 0 auto;
+	display: block;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 3px 15px;
+	color: #FFF;
+	border: 1px solid #7B992B;
+	background: -webkit-gradient(linear, left top, left bottom, from(#90A933), to(#7B992B));
+	background: -moz-linear-gradient(top,  #90A933, #7B992B);
+}
+aside {
+	color: #BBBBBB;
+	font-family: Lucida Grande, Arial, Verdana, sans-serif;
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 1.5em;
+	margin-top: 5px;
+}
+
+/* SPECIFIC STYLES */
+#main_content {
+	background-color: #FFF;
+	margin: 0 auto;
+	width: 600px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+#number_1, #number_2, #number_3 {
+	height: 26px;
+	width: 30px;
+	-moz-border-radius: 21px;
+	-webkit-border-radius: 21px;
+	border-radius: 21px;
+	background-color: #52A3D4;
+	text-align: center;
+	font-family: 'Kreon', serif;
+	color: #FFF;
+	padding-top: 4px;
+	border: 6px solid #FFF;
+	margin-left: -21px;
+	float: left;
+}
+div.gray_container label{
+	margin-top: 20px;
+}
+div.gray_container label:first-child {
+	margin-top: 0;
+}
+#credit_card {
+	float: left;
+}
+#credit_card_logos {
+	width: 189px;
+	height: 32px;
+	background: url(assets/images/sprite.png) 0px -122px no-repeat;
+	float: right;
+}
+#security_code {
+	float: left;
+}
+#security_img {
+	width: 70px;
+	height: 32px;
+	background: url(assets/images/sprite.png) 0px -331px no-repeat;
+	float: left;
+	margin-left: 10px;
+}
+#locked {
+	height: 19px;
+	width: 15px;
+	background: url(assets/images/sprite.png) -59px -499px no-repeat;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+}
+
+/* GENERAL STYLES */
+.clear {
+	clear: both;
+}
+.gray_container {
+	background-color: #F5F5F5;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	padding: 30px 40px;
+	margin: 0 40px;
+	font-family: Lucida Grande, Arial, Verdana, sans-serif;
+	position: relative;
+}
