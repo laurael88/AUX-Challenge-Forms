@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Kreon:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>AUX Forms Challenge</title>
@@ -21,7 +20,7 @@
             $emailFrom = strip_tags($_POST['email']);
             
             // who you're sending the email to (probably change this)
-            $emailTo = "apprentices@freshtilledsoil.com";
+            $emailTo = "laura.lozano@freshtilledsoil.com";
             $subject = "Submission";
             
             // inset information into the body of the email
@@ -38,7 +37,7 @@
             if ($success){
                 echo 'sent';
             } else {
-                echo 'not sent';
+                echo 'Opps! Looks like we encountered a problem with your form.';
             }
         
         } else {
@@ -49,7 +48,7 @@
                 <h2>50 projects, 500 images, 10 videos, domain building, and techincal support.</h2>
             </header>
 
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" id="portfolio_form">
                 
                 <fieldset id="portfolio_info">
                     <div id="number_1">
@@ -60,10 +59,10 @@
 
                     <div class="gray_container">
                         <label for="portfolio">Portfolio title</label>
-                        <input type="text" id="portfolio" name="portfolio" minlength="2"/>
+                        <input type="text" id="portfolio" class="required" name="portfolio" minlength="2"/>
 
-                        <label for="website">Portfolio address</label>
-                        <input type="text" id="website" name="website" minlength="2"/>
+                        <label for="website" class="heading_label">Portfolio address</label>
+                        <input type="text" id="website" class="required" name="website"/>
                     </div> <!--gray_container-->
                 </fieldset> <!--portfolio_info-->
 
@@ -76,14 +75,14 @@
 
                     <div class="gray_container">
                         <label for="name">Name</label>
-                        <input type="text" id="name" name="name" minlength="2"/>
+                        <input type="text" id="name" class="required" name="name" minlength="2"/>
                         
-                        <label for="name">E-mail</label>
-                        <input type="email" id="email" name="email" minlength="2"/>
+                        <label for="name" class="heading_label">E-mail</label>
+                        <input type="email" id="email" class="required" name="email" minlength="2"/>
                         <aside>NOTE: We'll never share your email, promise.</aside>
 
-                        <label for="user_password">Password</label>
-                        <input type="password" id="user_password" name="user_password" minlength="6"/>
+                        <label for="user_password" class="heading_label">Password</label>
+                        <input type="password" id="user_password" class="required" name="user_password" minlength="6"/>
                     </div> <!--gray_container-->
                 </fieldset> <!--portfolio_info-->
                 
@@ -95,24 +94,25 @@
                     <div class="clear"></div> <!--clear-->
 
                     <div class="gray_container">
-                        <label for="credit_card">Card number</label>
-                        <input type="text" id="credit_card" name="credit_card"/>
 
                         <div id="credit_card_logos">
                         </div> <!--credit_card_logos-->
 
-                        <div class="clear"></div> <!--clear-->
+                        <label for="credit_card">Card number</label>
+                        <input type="text" id="credit_card" class="required" name="credit_card"/>
 
-                        <label for="security_code">Security code</label>
-                        <input type="text" id="security_code" name="security_code" minlength="3"/>
+                        <div class="clear"></div> <!--clear-->
 
                         <div id="security_img">
                         </div> <!--credit_card_logos-->
 
+                        <label for="security_code" class="heading_label">Security code</label>
+                        <input type="text" id="security_code" class="required" name="security_code" minlength="3"/>
+
                         <div class="clear"></div> <!--clear-->
 
-                        <label for="expiration">Expiration date</label>
-                        <select name="expiration" id="expiration">
+                        <label for="expiration" class="heading_label">Expiration date</label>
+                        <select name="expiration" id="expiration" class="required">
                             <option>Month</option>
                             <option>December</option>
                             <option>November</option>
@@ -127,7 +127,7 @@
                             <option>February</option>
                             <option>January</option>
                         </select>
-                        <select name="year" id="year">
+                        <select name="year" id="year" class="required">
                             <option>Year</option>
                             <option>2020</option>
                             <option>2019</option>
@@ -152,5 +152,8 @@
         }
     ?>
 
+    <script src="assets/js/lib/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/lib/jquery.validate.js" type="text/javascript"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
 </body>
 </html>

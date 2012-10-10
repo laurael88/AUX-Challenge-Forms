@@ -126,18 +126,13 @@ aside {
 	margin-left: -21px;
 	float: left;
 }
-div.gray_container label{
-	margin-top: 20px;
-}
-div.gray_container label:first-child {
-	margin-top: 0;
-}
 #credit_card {
 	float: left;
 }
 #credit_card_logos {
 	width: 189px;
 	height: 32px;
+	margin-top: 14px;
 	background: url(assets/images/sprite.png) 0px -122px no-repeat;
 	float: right;
 }
@@ -148,8 +143,8 @@ div.gray_container label:first-child {
 	width: 70px;
 	height: 32px;
 	background: url(assets/images/sprite.png) 0px -331px no-repeat;
-	float: left;
-	margin-left: 10px;
+	float: right;
+	margin: 34px 273px 0 0;
 }
 #locked {
 	height: 19px;
@@ -160,9 +155,20 @@ div.gray_container label:first-child {
 	bottom: 15px;
 }
 
+/* JQUERY VALIDATE ERROR STATE STYLES */
+.error {
+	display: block;
+	color: #FF4C4C;
+	font-size: 13px;
+	font-weight: 700;
+}
+
 /* GENERAL STYLES */
 .clear {
 	clear: both;
+}
+.heading_label {
+	margin-top: 20px;
 }
 .gray_container {
 	background-color: #F5F5F5;
